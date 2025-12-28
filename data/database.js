@@ -5,6 +5,8 @@ export const connectDB = () => {
             .connect(process.env.MONGO_URI, {
                   dbName: "backendapi",
             })
-            .then(() => console.log("Database Connected"))
+            .then(() => console.log(
+                  `Database Connected with ${process.env.MONGO_URI}`
+            ))
             .catch((e) => console.log(e));
 };
